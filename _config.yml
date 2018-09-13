@@ -7,7 +7,7 @@ force-https: True
 lang: "en"
 paginate: 5
 google-tracking-id: ""
-theme: "jekyll-theme-prettydocs-full"
+theme: "jekyll-theme-prettydocs"
 
 # Build Settings
 markdown: kramdown

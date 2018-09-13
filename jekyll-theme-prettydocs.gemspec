@@ -1,12 +1,12 @@
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-prettydocs-full"
+  spec.name          = "jekyll-theme-prettydocs"
   spec.version       = "1.0.0"
   spec.authors       = ["Connor Christie", "Alexandru Coman"]
   spec.email         = ["chillercraft@hotmail.com", "alexandru.coman@tss-yonder.com"]
  
   spec.summary       = %q{PrettyDocs-Jekyll is a free project documentation theme designed for developers & startups.}
   spec.description   = "PrettyDocs-Jekyll is a free project documentation theme designed for developers & startups."
-  spec.homepage      = "https://github.com/ConnorChristie/jekyll-theme-prettydocs-full"
+  spec.homepage      = "https://github.com/ConnorChristie/jekyll-theme-prettydocs"
   spec.license       = "CC-BY-3.0"
 
   all_files          = `git ls-files -z`.split("\x0")

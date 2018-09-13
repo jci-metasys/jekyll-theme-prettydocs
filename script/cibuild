@@ -10,4 +10,4 @@ else
   exit 1
 fi
 
-gem build jekyll-theme-prettydocs-full.gemspec
+gem build jekyll-theme-prettydocs.gemspec
