@@ -1,0 +1,35 @@
+- title: 'Lorem Ipsum'
+  intro: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
+  cards:
+    - title: 'Nunc eleifend'
+      intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      color: 'blue'
+      icon:  'fas fa-university'
+      url: ''
+
+    - title: 'Donec at dapibus'
+      intro: 'Sed rutrum rutrum ligula non vehicula.'
+      color: 'pink'
+      icon:  'fas fa-book'
+      url: ''
+
+- title: 'Other content'
+  intro: ''
+  cards:
+    - title: 'Resources'
+      intro: 'Cras in nisi ligula.'
+      color: 'green'
+      icon:  'fas fa-rss'
+      url: '/resources'
+
+    - title: 'FAQs'
+      intro: 'Proin eu porttitor elit. Donec vitae nulla felis.'
+      color: 'purple'
+      icon:  'fas fa-question'
+      url: '/faqs'
+
+    - title: 'Contact'
+      intro: 'Pellentesque pharetra elit a leo venenatis, pellentesque feugiat mauris volutpat.'
+      color: 'orange'
+      icon: 'fas fa-address-card'
+      url: '/contact'

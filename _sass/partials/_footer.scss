@@ -1,0 +1,23 @@
+.footer {
+    background: darken($text-color, 15%);
+    color: rgba(256, 256, 256, 0.6);
+    padding: 15px 0;
+    height: 100px;
+    a {
+        color: $color-primary;
+    }
+
+    .copyright {
+        margin-top: 25px;
+    }
+
+    .logo {
+        width: 122px;
+    }
+}
+
+.landing-page {
+    .footer .container {
+        max-width: 860px;
+    }
+}

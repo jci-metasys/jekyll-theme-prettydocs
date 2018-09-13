@@ -1,0 +1,48 @@
+<section id="blog_post" class="blog-post-section doc-wrapper">
+    <div class="container">
+        <div id="doc-header" class="doc-header text-center">
+            <h1 class="doc-title" itemprop="name headline">
+                <i class="icon {{ page.icon | default: "fas fa-paper-plane" }}"></i>
+                {{ page.title }}
+            </h1>
+            {% if page.author %}
+            <div class="meta">
+                Published by:
+                {% if page.author.first %}
+                    {% for author in page.author %}
+                        <i class="fa fa-user"></i>
+                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">{{ author }}</span>
+                        </span>
+                    {% endfor %}
+                {% else %}
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <span itemprop="name">{{ page.author }}</span>
+                    </span>
+                {% endif %}
+                on <i class="far fa-clock"></i> 
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: "%B %-d, %Y" }}
+                </time>
+            </div>
+            {% elsif page.date %}
+            <div class="meta">
+                <i class="far fa-clock"></i> Last updated: 
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: "%B %-d, %Y" }}
+                </time>
+            </div>
+            {% endif %}
+        </div>
+        <div class="doc-body">
+            <div class="doc-content">
+                <div class="content-inner">
+                    <section id="dashboards" class="doc-section">
+                        {{ content }}
+                    </section>
+                </div>
+            </div>
+            {% include _partials/toc.html content=content maximum_level=4%}
+        </div>
+    </div>
+</section>

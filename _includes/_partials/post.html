@@ -1,0 +1,40 @@
+<article>
+    <header>
+        <h3><a href="{{ post.url | prepend: site.baseurl }} ">{{ post.title }}</a></h3>
+        Published by: 
+        {% if post.author.first %}
+            {% for author in post.author %}
+                <i class="far fa-user"></i>
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{ author }}</span>
+                </span>
+            {% endfor %}
+        {% else %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ post.author }}</span>
+            </span>
+        {% endif %}
+        | <i class="far fa-clock"></i> Data: 
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ post.date | date: "%B %-d, %Y" }}
+        </time> | 
+        <i class="fas fa-tags"></i> Categories:
+        {% capture container %}content/{% endcapture %}
+        {% assign previous = "" %}
+        {% for category in post.categories %}
+            {% if forloop.first == false %}
+                {% capture container %}{{ container }}{{ previous }}/{% endcapture %}
+            {% endif %}
+            {% assign previous = category %}
+            <a href="{{ site.baseurl }}/{{container}}{{ category }}">
+                <span class="label label-info">{{ category }}</span>
+            </a>
+        {% endfor %}
+    </header>
+    <div class="content">
+        {% if post.excerpt %}{{ post.excerpt }}{% endif %}
+        <p>
+            <a class="btn btn-primary btn-cta" href="{{ post.url | prepend: site.baseurl }}"><i class="fas fa-book"></i>Read more...</a>
+        </p>
+    </div>
+</article>

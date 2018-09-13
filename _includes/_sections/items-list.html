@@ -1,0 +1,11 @@
+{% if include.items %} {% assign items = include.items %} {% endif %}
+<section class="items-list">
+    {% for item in items %}
+        {% include _partials/item.html
+            class=item.class
+            icon=item.icon
+            title=item.title
+            content=item.content
+        %}
+    {% endfor %}
+</section>

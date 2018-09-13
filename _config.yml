@@ -1,0 +1,56 @@
+# Site Settings
+url: ""
+baseurl: ""
+paginate_path: content/page-:num/
+permalink: content/:categories/:title/
+force-https: True
+lang: "en"
+paginate: 5
+google-tracking-id: ""
+theme: "jekyll-theme-prettydocs-full"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input:            GFM
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+  parse_block_html: true
+
+# Enable minification SASS
+sass:
+  sass_dir:         assets/css
+  style:            compressed
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Theme settings
+author:
+  name: "TSS-Yonder"
+  email: ""
+  website:
+    url: "https://tss-yonder.com/"
+    title: ""
+
+# Shower default values
+default_width: 792
+default_lang: en
+default_body_class: list
+
+exclude:
+  - CONTRIBUTING
+  - CONTRIBUTORS
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - .gitignore
+  - .travis.yml
